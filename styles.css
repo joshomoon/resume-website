@@ -194,21 +194,4 @@ body.dark .theme-toggle:hover {
     background-color: #555;
 }
 
-.tagline {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.contact-info {
-    font-size: 1rem;
-    color: #f0f0f0;
-    opacity: 0.95;
-    line-height: 1.4;
-    margin-bottom: 15px;
-}
-body.dark .contact-info {
-    color: #e6e6e6;
-}
-
-
 }
