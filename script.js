@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const downloadBtn = document.getElementById("download-pdf");
     downloadBtn.addEventListener("click", () => {
-        const element = document.body;
         const opt = {
             margin: 0.5,
             filename: 'My_Resume.pdf',
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             html2canvas: { scale: 2 },
             jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
         };
-        html2pdf().set(opt).from(element).save();
+        html2pdf().set(opt).from(document.body).save();
     });
 
     const jobs = document.querySelectorAll(".job");
@@ -50,6 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
             showToast(`Learn more about my role at ${companyName}`);
         });
     });
+
 });
+
 
 
