@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume Website</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <body>
 
     <header class="header">
         <h1>Your Name</h1>
         <p class="tagline">Your Tagline or Role</p>
-        <button id ="theme toggle" class="theme toggle">Light Mode</button>
-        <button id="download-odf" class="btn">Download PDF</button>button>
+        <div class="header-buttons">
+            <button id="theme-toggle" class="theme-toggle">Light Mode</button>
+            <button id="download-pdf" class="btn">Download PDF</button>
+        </div>
     </header>
-
-    <script src="script.js"></script>
 
     <section class="about" id="about">
         <img src="profile.jpg" alt="Profile Picture" class="profile-pic" />
@@ -33,82 +33,75 @@
         <h2>Experience</h2>
         <div class="experience-list">
             <div class="job">
-                <h3>Job Title — Company</h3>
+                <h3>Job Title — Company A</h3>
                 <span class="job-date">2023 – Present</span>
                 <p>Brief description of responsibilities and accomplishments.</p>
             </div>
 
             <div class="job">
-                <h3>Job Title — Company</h3>
+                <h3>Job Title — Company B</h3>
                 <span class="job-date">2020 – 2023</span>
                 <p>Brief description of responsibilities and accomplishments.</p>
             </div>
 
             <div class="job">
-                <h3>Job Title — Company</h3>
+                <h3>Job Title — Company C</h3>
                 <span class="job-date">2018 – 2020</span>
                 <p>Brief description of responsibilities and accomplishments.</p>
             </div>
         </div>
     </section>
 
-<section class="skills" id="skills">
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-
-        <div class="skill-item">
-            <div class="skill-header">
-                <span>HTML</span>
-                <span>90%</span>
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-header">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress html"></div>
+                </div>
             </div>
-            <div class="progress-bar">
-                <div class="progress html"></div>
+            <div class="skill-item">
+                <div class="skill-header">
+                    <span>CSS</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress css"></div>
+                </div>
             </div>
-        </div>
-
-        <div class="skill-item">
-            <div class="skill-header">
-                <span>CSS</span>
-                <span>85%</span>
+            <div class="skill-item">
+                <div class="skill-header">
+                    <span>JavaScript</span>
+                    <span>80%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress js"></div>
+                </div>
             </div>
-            <div class="progress-bar">
-                <div class="progress css"></div>
+            <div class="skill-item">
+                <div class="skill-header">
+                    <span>React</span>
+                    <span>75%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress react"></div>
+                </div>
             </div>
-        </div>
-
-        <div class="skill-item">
-            <div class="skill-header">
-                <span>JavaScript</span>
-                <span>80%</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress js"></div>
-            </div>
-        </div>
-
-        <div class="skill-item">
-            <div class="skill-header">
-                <span>React</span>
-                <span>75%</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress react"></div>
-            </div>
-        </div>
-
-        <div class="skill-item">
-            <div class="skill-header">
-                <span>Python</span>
-                <span>88%</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress python"></div>
+            <div class="skill-item">
+                <div class="skill-header">
+                    <span>Python</span>
+                    <span>88%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress python"></div>
+                </div>
             </div>
         </div>
-
-    </div>
-</section>
+    </section>
 
     <section class="projects" id="projects">
         <h2>Projects</h2>
@@ -118,13 +111,11 @@
                 <p>Short description of the project.</p>
                 <a href="#" class="btn">View Project</a>
             </div>
-
             <div class="card">
                 <h3>Project 2</h3>
                 <p>Short description of the project.</p>
                 <a href="#" class="btn">View Project</a>
             </div>
-
             <div class="card">
                 <h3>Project 3</h3>
                 <p>Short description of the project.</p>
@@ -143,5 +134,7 @@
         </form>
     </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
+
