@@ -1,4 +1,3 @@
-<script>
 const toggleBtn = document.getElementById("theme toggle");
 
 if (localStorage.getItem("theme") === "dark") {
