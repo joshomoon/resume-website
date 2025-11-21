@@ -53,9 +53,13 @@ body {
 
 .header-buttons {
     margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.theme-toggle {
+.theme-toggle, #download-pdf {
     padding: 0.5rem 1rem;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
@@ -67,7 +71,7 @@ body {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.theme-toggle:hover {
+.theme-toggle:hover, #download-pdf:hover {
     background: rgba(255, 255, 255, 0.35);
     transform: scale(1.05);
 }
