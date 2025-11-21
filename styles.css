@@ -7,8 +7,8 @@
 }
 
 body.dark-mode {
-    --bg-color: #000000;
-    --text-color: #ffffff;
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
     --card-bg: #1e1e1e;
     --accent: linear-gradient(135deg, #4a90e2, #28a745);
     --shadow: rgba(255, 255, 255, 0.1);
@@ -35,7 +35,7 @@ body {
     align-items: center;
     padding: 4rem 1rem;
     background: var(--accent);
-    color: white;
+    color: var(--text-color);
     text-align: center;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     position: relative;
@@ -59,7 +59,7 @@ body {
     padding: 0.5rem 1rem;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
-    color: white;
+    color: var(--text-color);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 8px;
     cursor: pointer;
@@ -70,11 +70,6 @@ body {
 .theme-toggle:hover {
     background: rgba(255, 255, 255, 0.35);
     transform: scale(1.05);
-}
-
-body.dark-mode .theme-toggle {
-    background-color: #222;
-    color: #fff;
 }
 
 .about {
@@ -177,11 +172,11 @@ body.dark-mode .theme-toggle {
     animation: fillAnimation 2s ease forwards;
 }
 
-.progress.html { width: 90%; }
-.progress.css { width: 85%; }
-.progress.js { width: 80%; }
-.progress.react { width: 75%; }
-.progress.python { width: 88%; }
+.progress.html { width: 90%; animation-delay: 0.2s; }
+.progress.css { width: 85%; animation-delay: 0.4s; }
+.progress.js { width: 80%; animation-delay: 0.6s; }
+.progress.react { width: 75%; animation-delay: 0.8s; }
+.progress.python { width: 88%; animation-delay: 1s; }
 
 @keyframes fillAnimation {
     from { width: 0; }
@@ -208,6 +203,12 @@ body.dark-mode .theme-toggle {
     background-color: var(--card-bg);
     border-radius: 10px;
     box-shadow: 0 2px 8px var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px var(--shadow);
 }
 
 .btn {
@@ -242,6 +243,12 @@ body.dark-mode .theme-toggle {
     color: var(--text-color);
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #4a90e2;
+    border-color: #4a90e2;
+}
+
 .contact-form button {
     padding: 0.8rem;
     background: var(--accent);
@@ -267,6 +274,11 @@ body.dark-mode .theme-toggle {
     font-size: 0.9rem;
 }
 
+body.dark-mode .toast {
+    background-color: rgba(220, 220, 220, 0.9);
+    color: #000;
+}
+
 .toast.show {
     opacity: 1;
     transform: translateX(-50%) translateY(-10px);
@@ -286,6 +298,7 @@ body.dark-mode .theme-toggle {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
