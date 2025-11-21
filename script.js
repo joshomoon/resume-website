@@ -1,44 +1,44 @@
-const toggleBtn = document.getElementById("theme toggle");
-
-if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-    toggleBtn.textContent = "Light Mode";
-}
-
-toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
+document.addEventListener("DOMContentLoaded", () => {
+    
+    const toggleBtn = document.getElementById("theme toggle");
+    
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
         toggleBtn.textContent = "Light Mode";
-        localStorage.setItem("theme", "dark");
-    } else {
-        toggleBtn.textContent = "Dark Mode";
-        localStorage.setItem("theme", "light");
     }
-});
-const jobs = document.querySelectorAll(".job");
 
-function showToast(message) {
-    const toast = document.createElement("div");
-    toast.className = "toast";
-    toast.textContent = message;
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+            toggleBtn.textContent = "Light Mode";
+            localStorage.setItem("theme", "dark");
+        } else {
+            toggleBtn.textContent = "Dark Mode";
+            localStorage.setItem("theme", "light");
+        }
+    });
 
-    document.body.appendChild(toast);
+    const jobs = document.querySelectorAll(".job");
 
-    setTimeout(() => {
-        toast.classList.add("show");
-    }, 100);
+    function showToast(message) {
+        const toast = document.createElement("div");
+        toast.className = "toast";
+        toast.textContent = message;
+        document.body.appendChild(toast);
 
-    setTimeout(() => {
-        toast.classList.remove("show");
-        setTimeout(() => toast.remove(), 500); 
-    }, 3000);
-}
+        setTimeout(() => toast.classList.add("show"), 100);
+        setTimeout(() => {
+            toast.classList.remove("show");
+            setTimeout(() => toast.remove(), 500);
+        }, 3000);
+    }
 
-jobs.forEach(job => {
-    job.addEventListener("click", () => {
-        const jobTitle = job.querySelector("h3").textContent;
-        showToast(`Learn more about ${jobTitle}`);
+    jobs.forEach(job => {
+        job.addEventListener("click", () => {
+            const companyName = job.querySelector("h3").textContent.split("—")[1]?.trim() || "this company";
+            showToast(`Learn more about my role at ${companyName}`);
+        });
     });
 });
+
 
