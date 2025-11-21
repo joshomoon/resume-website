@@ -1,5 +1,5 @@
 <script>
-const toggleBtn = document.getElementById("theme-toggle");
+const toggleBtn = document.getElementById("theme toggle");
 
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
