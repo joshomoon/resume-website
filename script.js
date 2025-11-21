@@ -16,3 +16,29 @@ toggleBtn.addEventListener("click", () => {
         localStorage.setItem("theme", "light");
     }
 });
+const jobs = document.querySelectorAll(".job");
+
+function showToast(message) {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = message;
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.classList.add("show");
+    }, 100);
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 500); 
+    }, 3000);
+}
+
+jobs.forEach(job => {
+    job.addEventListener("click", () => {
+        const jobTitle = job.querySelector("h3").textContent;
+        showToast(`Learn more about ${jobTitle}`);
+    });
+});
+
