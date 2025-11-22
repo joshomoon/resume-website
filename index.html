@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>John Doe</h1>
+            <p>Frontend Developer & Designer</p>
+            <button id="theme-toggle">Toggle Dark/Light Mode</button>
+            <button id="download-pdf">Download PDF</button>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <p>Hello! I'm a passionate frontend developer with experience in building modern web applications. I love turning ideas into reality using code.</p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul class="experience-list">
+            <li class="job" data-company="Company A">Frontend Developer at Company A</li>
+            <li class="job" data-company="Company B">Web Developer at Company B</li>
+            <li class="job" data-company="Company C">UI Designer at Company C</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <span>HTML</span>
+                <div class="progress-bar"><div class="progress" data-progress="90%"></div></div>
+            </div>
+            <div class="skill">
+                <span>CSS</span>
+                <div class="progress-bar"><div class="progress" data-progress="85%"></div></div>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="progress-bar"><div class="progress" data-progress="80%"></div></div>
+            </div>
+            <div class="skill">
+                <span>React</span>
+                <div class="progress-bar"><div class="progress" data-progress="75%"></div></div>
+            </div>
+            <div class="skill">
+                <span>Node.js</span>
+                <div class="progress-bar"><div class="progress" data-progress="70%"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>A modern web application built with React.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>An interactive portfolio website using HTML, CSS, and JS.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 3</h3>
+                <p>A Node.js backend API for handling data requests.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            
+            <button type="submit">Send Message</button>
+            <p class="form-error" id="form-error"></p>
+        </form>
+    </section>
+
+    <div id="toast"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
