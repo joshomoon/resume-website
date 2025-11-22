@@ -15,7 +15,7 @@ const toast = document.getElementById('toast');
 
 jobs.forEach(job => {
     job.addEventListener('click', () => {
-        toast.textContent = `Learn more about my role at ${job.dataset.company}`;
+        toast.textContent = `Learn more about my role as a ${job.dataset.company}`;
         toast.style.opacity = '1';
         setTimeout(() => {
             toast.style.opacity = '0';
